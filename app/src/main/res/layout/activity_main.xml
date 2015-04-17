@@ -1,15 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:orientation="vertical" >
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
-    <com.google.android.gms.maps.MapView
-        xmlns:tools="http://schemas.android.com/tools"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:id="@+id/map"
-        tools:context=".MainActivity"
-        ></com.google.android.gms.maps.MapView>
+    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+        android:layout_height="match_parent" android:id="@+id/map" tools:context=".MainActivity"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_alignParentStart="false" />
 
-</LinearLayout>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Start"
+        android:id="@+id/StartButton"
+        android:layout_gravity="center_horizontal"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="@color/bright_foreground_inverse_material_dark"
+        android:text="THACHER TRAILS"
+        android:id="@+id/textView"
+        android:textStyle="bold"
+        android:typeface="sans"
+        android:textSize="@dimen/abc_text_size_title_material"
+        android:textIsSelectable="false"
+        android:textColor="@color/abc_primary_text_material_dark" />
+
+</RelativeLayout>
